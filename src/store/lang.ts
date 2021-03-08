@@ -4,6 +4,9 @@ import { Dispatch } from 'redux';
 // Data
 import { supportedLanguages } from 'data';
 
+// Types
+import ILang from 'types/lang';
+
 /*
  * Actions
  */
@@ -12,13 +15,13 @@ const SET_LANG = 'SET_LANG';
 interface SetLangAction {
 	type: typeof SET_LANG,
 	payload: {
-		lang_code: string
+		lang_code: ILang
 	}
 }
 
 type LangActionTypes = SetLangAction
 
-function setLocal (lang_code: string) {
+function setLocal (lang_code: ILang) {
 	return (dispatch: Dispatch<LangActionTypes>) => {
 
 		return dispatch({
@@ -38,11 +41,11 @@ export const actions = {
  * Reducer
  */
 export interface ILangState {
-	code: string
+	code: ILang
 }
 
 const initialState: ILangState = {
-	code: navigator?.language?.split(/[-_]/)?.[0] || 'en'
+	code: 'en'
 };
 
 export function reducer (state = initialState, action: LangActionTypes) {
