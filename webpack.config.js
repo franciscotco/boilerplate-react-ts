@@ -10,7 +10,7 @@ module.exports = {
 	mode: 'development',
 	entry: {
 		vendors: ['styled-components'],
-		app: './src/app.tsx'
+		app: './src/index.tsx'
 	},
 	module: {
 		rules: [
@@ -51,7 +51,6 @@ module.exports = {
 			chunks: 'async',
 			minChunks: 1,
 			minSize: 1,
-			//minRemainingSize: 0,
 			maxInitialRequests: Infinity,
 			maxAsyncRequests: Infinity,
 
