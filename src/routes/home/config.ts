@@ -4,7 +4,7 @@ export default {
 	id: 'home',
 	name: 'home',
 	path: '/home',
-	exact: false,
+	exact: true,
 	Component: Home,
 	isEnable: () => true,
 	order: 0

@@ -1,5 +1,5 @@
 // Configs
-import HomeConfig from './home/config';
+import HomeConfig from 'routes/home/config';
 
 export interface IRoutes {
 	id: string,
