@@ -10,7 +10,16 @@ module.exports = {
 	mode: 'development',
 	entry: {
 		vendors: ['styled-components'],
-		app: './src/index.tsx'
+		app: [
+			'./src/index.tsx'
+		]
+	},
+	output: {
+		filename: '[name].bundle.js',
+		chunkFilename: '[chunkhash].chunk.js',
+		path: path.resolve(__dirname, 'dist'),
+		publicPath: `http://${HRM_HOST}:${HRM_PORT}/`,
+		pathinfo: true
 	},
 	module: {
 		rules: [
@@ -25,14 +34,24 @@ module.exports = {
 			}
 		]
 	},
-	devtool: 'inline-source-map',
+	devtool: 'cheap-module-source-map',
 	devServer: {
+		hot: true,
+
 		host: HRM_HOST,
 		port: HRM_PORT,
-		hot: true,
-		contentBase: './dist',
+
+		contentBase: path.join(__dirname, 'public'),
 		watchContentBase: true,
-		inline: true,
+		publicPath: '/',
+		historyApiFallback: true,
+
+		allowedHosts: [
+			'*.local',
+			'*.dev',
+			'localhost',
+			'0.0.0.0'
+		],
 		headers: {
 			'Access-Control-Allow-Origin': '*',
 			'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, PATCH, OPTIONS',
@@ -65,11 +84,5 @@ module.exports = {
 			path.resolve(__dirname, 'node_modules/')
 		],
 		extensions: ['.tsx', '.ts', '.js', '.json']
-	},
-	output: {
-		filename: '[name].bundle.js',
-		chunkFilename: '[chunkhash].chunk.js',
-		path: path.resolve(__dirname, 'dist'),
-		publicPath: `http://${HRM_HOST}:${HRM_PORT}/`
 	}
 };
