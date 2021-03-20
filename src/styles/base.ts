@@ -28,6 +28,11 @@ export const BaseGlobalStyles = createGlobalStyle`
 		height:100%;
 	}
 
+
+	/*
+	 *  Media Query
+	 */
+
 	@media (${props => props.theme.media.mobile_large}) {
 		html, body {
 			font-size:8px;

@@ -19,7 +19,6 @@ export interface ITheme {
 		desktop_xlarge: string,
 		desktop_xxlarge: string
 	},
-
 	color: {
 		white: string,
 		gray_lightest: string,
