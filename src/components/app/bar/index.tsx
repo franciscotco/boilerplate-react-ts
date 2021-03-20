@@ -5,7 +5,7 @@ import { NavLink, useLocation } from 'react-router-dom';
 
 // Types
 import IRoutes from 'types/routes';
-import ISupportedLanguages from 'types/lang';
+import ILang from 'types/lang';
 
 // Data
 import { supportedLanguages } from 'data';
@@ -19,8 +19,8 @@ import {
 } from './styles';
 
 export interface IProps {
-	onSwitchLang: (arg0: ISupportedLanguages) => void,
-	lang_code: ISupportedLanguages,
+	onSwitchLang: (arg0: ILang) => void,
+	lang_code: ILang,
 	routes: IRoutes[]
 }
 
@@ -28,7 +28,7 @@ function AppBar ({ onSwitchLang, lang_code, routes }: IProps) {
 
 	const location = useLocation();
 
-	const onClick = (lang: ISupportedLanguages) => () => onSwitchLang(lang);
+	const onClick = (lang: ILang) => () => onSwitchLang(lang);
 
 	return (
 		<Root>
