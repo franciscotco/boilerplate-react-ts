@@ -5,7 +5,7 @@ module.exports = {
 	mode: 'production',
 	entry: {
 		vendors: ['styled-components'],
-		app: ['./src/index.tsx']
+		app: ['./src/app.tsx']
 	},
 	output: {
 		filename: '[name].[contenthash].js',
@@ -18,10 +18,6 @@ module.exports = {
 				test: /\.tsx?$/,
 				use: 'ts-loader',
 				exclude: /node_modules/
-			},
-			{
-				test: /\.html$/i,
-				loader: 'html-loader'
 			}
 		]
 	},

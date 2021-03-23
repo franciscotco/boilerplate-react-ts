@@ -10,7 +10,7 @@ module.exports = {
 	mode: 'development',
 	entry: {
 		vendors: ['styled-components'],
-		app: ['./src/index.tsx']
+		app: ['./src/app.tsx']
 	},
 	module: {
 		rules: [
@@ -18,10 +18,6 @@ module.exports = {
 				test: /\.tsx?$/,
 				use: 'ts-loader',
 				exclude: /node_modules/
-			},
-			{
-				test: /\.html$/i,
-				loader: 'html-loader'
 			}
 		]
 	},
