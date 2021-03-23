@@ -10,16 +10,7 @@ module.exports = {
 	mode: 'development',
 	entry: {
 		vendors: ['styled-components'],
-		app: [
-			'./src/index.tsx'
-		]
-	},
-	output: {
-		filename: '[name].bundle.js',
-		chunkFilename: '[chunkhash].chunk.js',
-		path: path.resolve(__dirname, 'dist'),
-		publicPath: `http://${HRM_HOST}:${HRM_PORT}/`,
-		pathinfo: true
+		app: ['./src/index.tsx']
 	},
 	module: {
 		rules: [
