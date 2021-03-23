@@ -1,5 +1,5 @@
 {
-	"parser": "@babel/eslint-parser",
+	"parser": "@typescript-eslint/parser",
 	"rules": {
 		"indent": [2, "tab", { "SwitchCase": 1 }],
 		"quotes": [2, "single"],
@@ -8,8 +8,6 @@
 		"semi": [2,"always"],
 		"no-console": [0],
 		"valid-jsdoc": 2,
-		"react/prop-types": 2,
-		"react/forbid-prop-types": [2, { "forbid": ["any"] }],
 		"react/jsx-boolean-value": 2,
 		"react/jsx-closing-bracket-location": 2,
 		"react/jsx-curly-spacing": 2,
@@ -48,7 +46,6 @@
 		"no-void": 2,
 		"no-with": 2,
 		"yoda": [2, "never"],
-		"strict": [2, "safe"],
 		"array-bracket-spacing": [2, "never"],
 		"block-spacing": [2, "always"],
 		"brace-style": [2, "stroustrup", { "allowSingleLine": true }],
@@ -74,8 +71,11 @@
 		"browser": true
 	},
 	"extends": ["plugin:import/errors", "plugin:import/warnings"],
-	"plugins": ["react"],
+	"plugins": ["react", "@typescript-eslint"],
 	"settings": {
+		"react": {
+			"version": "lastest"
+		},
 		"import/resolver": {
 			"node": {
 				"extensions": [".js", ".tsx", ".ts"],
