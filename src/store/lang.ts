@@ -24,12 +24,12 @@ type LangActionTypes = SetLangAction
 function setLocal (lang_code: ILang) {
 	return (dispatch: Dispatch<LangActionTypes>) => {
 
-		return dispatch({
+		return (dispatch({
 			type: SET_LANG,
 			payload: {
 				lang_code: supportedLanguages.includes(lang_code) ? lang_code : 'en'
 			}
-		});
+		}));
 	};
 }
 
