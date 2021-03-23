@@ -12,13 +12,13 @@ yarn --version
 ```
 
 ## Installation
-- From the root of the repository install the dependencies with:
+From the root of the repository install the dependencies with:
 ```
 yarn
 ```
 
 ## Development
-- To run the server in development mode:
+To run the server in development mode:
 ```
 yarn run dev
 ```
@@ -35,13 +35,13 @@ yarn run deploy
 ```
 
 ## Storybook
-- To run storybook and visualise all your components:
+To run storybook and visualise all your components:
 ```
 yarn run storybook
 ```
 
 ## Test
-- To test your project with jest:
+To test your project with jest:
 ```
 yarn run test
 ```
