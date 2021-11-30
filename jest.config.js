@@ -1,7 +1,5 @@
 module.exports = {
-	roots: [
-		'./src'
-	],
+	rootDir: "src",
 	testMatch: [
 		'**/__tests__/**/*.+(ts|tsx|js)',
 		'**/?(*.)+(spec|test).+(ts|tsx|js)'
@@ -12,5 +10,8 @@ module.exports = {
 	moduleDirectories: [
 		'node_modules',
 		'src'
-	]
+	],
+  moduleNameMapper: {
+    "@src(.*)$": "<rootDir>/$1"
+  }
 };
