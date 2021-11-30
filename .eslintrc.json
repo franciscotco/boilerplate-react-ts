@@ -1,0 +1,176 @@
+{
+  "extends": [
+    "standard",
+    "prettier",
+    "plugin:react/recommended",
+    "plugin:prettier/recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true,
+    "mocha": true
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "project": "./tsconfig.json"
+  },
+  "plugins": [
+    "react",
+    "standard",
+    "@typescript-eslint"
+  ],
+  "globals": {
+    "defaultDebounceTime": false,
+    "webpackDevServer": false,
+    "baseURL": false,
+    "jest": false,
+    "afterEach": false,
+    "beforeEach": false,
+    "context": false,
+    "cy": false,
+    "describe": false,
+    "expect": false,
+    "it": false,
+    "test": false
+  },
+  "rules": {
+    "no-case-declarations": [
+      "off"
+    ],
+    "prettier/prettier": [
+      "error"
+    ],
+    "react/react-in-jsx-scope": [
+      "off"
+    ],
+    "no-use-before-define": [
+      "off"
+    ],
+    "@typescript-eslint/camelcase": [
+      "off"
+    ],
+    "@typescript-eslint/no-this-alias": [
+      "off"
+    ],
+    "@typescript-eslint/no-empty-function": [
+      "off"
+    ],
+    "@typescript-eslint/explicit-module-boundary-types": [
+      "off"
+    ],
+    "@typescript-eslint/ban-ts-ignore": [
+      "off"
+    ],
+    "@typescript-eslint/ban-types": [
+      "error",
+      {
+        "types": {
+          "object": false
+        },
+        "extendDefaults": true
+      }
+    ],
+    "semi": [
+      "off"
+    ],
+    "@typescript-eslint/semi": [
+      "error"
+    ],
+    "no-unused-expressions": [
+      "off"
+    ],
+    "@typescript-eslint/no-var-requires": [
+      "off"
+    ],
+    "@typescript-eslint/no-unused-expressions": [
+      "error",
+      {
+        "allowTernary": true
+      }
+    ],
+    "no-unused-vars": [
+      "off"
+    ],
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+        "varsIgnorePattern": "^_"
+      }
+    ],
+    "@typescript-eslint/explicit-function-return-type": [
+      "off"
+    ],
+    "camelcase": [
+      "error",
+      {
+        "allow": [
+          "UNSAFE_componentWillMount",
+          "UNSAFE_componentWillReceiveProps",
+          "UNSAFE_componentWillUpdate",
+          "error_conflict",
+          "error_description",
+          "dom_id"
+        ]
+      }
+    ],
+    "import/order": [
+      "error",
+      {
+        "warnOnUnassignedImports": true,
+        "alphabetize": {
+          "order": "asc"
+        },
+        "newlines-between": "always",
+        "pathGroups": [
+          {
+            "pattern": "react",
+            "group": "external",
+            "position": "before"
+          },
+          {
+            "pattern": "@src/**",
+            "group": "internal"
+          },
+          {
+            "pattern": "@src/**",
+            "group": "internal"
+          },
+          {
+            "pattern": "*.scss",
+            "group": "index",
+            "patternOptions": { "matchBase": true },
+            "position": "after"
+          }
+        ],
+        "pathGroupsExcludedImportTypes": ["react"],
+        "groups": ["builtin", "external", "internal", "parent", "sibling", "index", "object", "type"]
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": [
+        "*.ts",
+        "*.tsx"
+      ],
+      "rules": {
+        "@typescript-eslint/explicit-function-return-type": [
+          "error"
+        ],
+        "react/prop-types": [
+          "off"
+        ]
+      }
+    }
+  ],
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
+}
