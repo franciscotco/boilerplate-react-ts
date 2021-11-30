@@ -2,12 +2,10 @@ const path = require("path");
 
 module.exports = {
 		stories: ["../src/components/**/*.stories.tsx"],
-		webpackFinal: async (config, { configType }) => {
-			config.resolve.modules = [
-			  path.resolve(__dirname, "../src"),
-			  "../node_modules",
-			]
-
+		webpackFinal: async (config) => {
+      config.resolve.alias = {
+        "@src": path.resolve(__dirname, "../src/")
+      }
 			return config;
 		},
 		typescript: {
