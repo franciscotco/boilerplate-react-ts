@@ -1,19 +1,4 @@
-// Locales
-import en from 'locales/en';
-import fr from 'locales/fr';
+export type { LangCode } from "./messages";
 
-export interface IMessage {
-	en: {
-		[key: string]: string
-	},
-	fr: {
-		[key: string]: string
-	}
-}
-
-const MESSAGES: IMessage = {
-	en: en,
-	fr: fr
-};
-
-export default MESSAGES;
+export { default as MESSAGES, supportedLanguages } from "./messages";
+export { default } from "./LocaleProviderContainer";
