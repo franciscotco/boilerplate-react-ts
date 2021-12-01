@@ -1,9 +1,10 @@
 import { lazy } from "react";
 
 import { withLazyLoading } from "@src/components/hoc/withLazyLoading";
-import type { Page } from "@src/router";
 
-export const HOME_CONFIG: Page = {
+import type { Route } from "./routes.types";
+
+export const HOME: Route = {
   id: "home",
   name: "home",
   path: "/home",
@@ -12,7 +13,7 @@ export const HOME_CONFIG: Page = {
       () =>
         import(
           /* webpackChunkName: "home" */
-          "./Home"
+          "@src/pages/Home"
         )
     )
   ),

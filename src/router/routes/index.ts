@@ -1,2 +1,2 @@
-export type { Page } from "./pages";
-export { routes } from "./pages";
+export { ROUTES, routes } from "./routes";
+export type { Route } from "./routes.types";
