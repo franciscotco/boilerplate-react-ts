@@ -1,10 +1,6 @@
-// Vendors
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from "styled-components";
 
-/*
- *
- */
-export const BaseGlobalStyles = createGlobalStyle`
+const BaseGlobalStyles = createGlobalStyle`
 	html, body {
 		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
 		'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -17,7 +13,7 @@ export const BaseGlobalStyles = createGlobalStyle`
 
 		height:100%;
 
-		background:${({ theme }) => theme.color.gray_lighter};
+		background:${({ theme }): string => theme.color.grayLighter};
 	}
 
 	body {
@@ -33,52 +29,54 @@ export const BaseGlobalStyles = createGlobalStyle`
 	 *  Media Query
 	 */
 
-	@media (${props => props.theme.media.mobile_large}) {
+	@media (${(props): string => props.theme.media.mobileLarge}) {
 		html, body {
 			font-size:8px;
 		}
 	}
 
-	@media (${props => props.theme.media.tablet}) {
+	@media (${(props): string => props.theme.media.tablet}) {
 		html, body {
 			font-size:8.25px;
 		}
 	}
 
-	@media (${props => props.theme.media.tablet_large}) {
+	@media (${(props): string => props.theme.media.tabletLarge}) {
 		html, body {
 			font-size:8.5px;
 		}
 	}
 
-	@media (${props => props.theme.media.desktop_small}) {
+	@media (${(props): string => props.theme.media.desktopSmall}) {
 		html, body {
 			font-size:9px;
 		}
 	}
 
-	@media (${props => props.theme.media.desktop_medium}) {
+	@media (${(props): string => props.theme.media.desktopMedium}) {
 		html, body {
 			font-size:9.25px;
 		}
 	}
 
-	@media (${props => props.theme.media.desktop_large}) {
+	@media (${(props): string => props.theme.media.desktopLarge}) {
 		html, body {
 			font-size:9.5px;
 		}
 	}
 
-	@media (${props => props.theme.media.desktop_xlarge}) {
+	@media (${(props): string => props.theme.media.desktopXLarge}) {
 		html, body {
 			font-size:10px;
 		}
 	}
 
-	@media (${props => props.theme.media.desktop_xxlarge}) {
+	@media (${(props): string => props.theme.media.desktopXXLarge}) {
 		html, body {
 			font-size:10.5px;
 		}
 	}
 
 `;
+
+export default BaseGlobalStyles;
