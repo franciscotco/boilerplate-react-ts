@@ -2,7 +2,7 @@ import React, { ReactElement } from "react";
 
 import LocaleProvider from "./locales";
 import ReduxProvider from "./redux";
-import Router from "./routes";
+import Router from "./router";
 import StyleProvider from "./styles";
 
 const App = (): ReactElement => (

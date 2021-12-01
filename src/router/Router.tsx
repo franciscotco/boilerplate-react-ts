@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 import AppContainer from "@src/components/AppContainer";
 
-import { routes } from "./pages";
+import { routes } from "./routes";
 
 const Router = (): ReactElement => (
   <BrowserRouter>

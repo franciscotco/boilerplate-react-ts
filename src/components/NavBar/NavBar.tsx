@@ -4,7 +4,7 @@ import { FormattedMessage } from "react-intl";
 import { NavLink } from "react-router-dom";
 
 import { LangCode, supportedLanguages } from "@src/locales";
-import { Page } from "@src/routes";
+import { Page } from "@src/router";
 
 import {
   Root,

@@ -1,4 +1,4 @@
-import { routes } from "./pages";
+import { routes } from "./routes";
 
 describe("Routes", () => {
   test("order", () => {

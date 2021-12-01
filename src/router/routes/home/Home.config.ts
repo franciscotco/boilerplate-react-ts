@@ -1,13 +1,13 @@
 import { lazy } from "react";
 
-import { withLoader } from "@src/components/hoc/withLoader";
-import type { Page } from "@src/routes";
+import { withLazyLoading } from "@src/components/hoc/withLazyLoading";
+import type { Page } from "@src/router";
 
 export const HOME_CONFIG: Page = {
   id: "home",
   name: "home",
   path: "/home",
-  component: withLoader(
+  component: withLazyLoading(
     lazy(
       () =>
         import(
