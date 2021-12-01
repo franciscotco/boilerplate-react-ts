@@ -9,7 +9,8 @@ const config = merge(common, {
   output: {
     filename: "[name].[contenthash].js",
     chunkFilename: "[name].[contenthash].js",
-    path: resolve(__dirname, "dist")
+    path: resolve(__dirname, "dist"),
+    publicPath: "/"
   },
   optimization: {
     minimize: true,

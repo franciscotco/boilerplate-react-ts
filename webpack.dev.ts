@@ -17,6 +17,11 @@ const config = merge<Configuration>(common, {
   mode: "development",
   target: "web",
   devtool: "cheap-module-source-map",
+  output: {
+    chunkFilename: `./[name].js`,
+    filename: `./[name].js`,
+    publicPath: "/"
+  },
   devServer: {
     hot: true,
     host: HRM_HOST,
