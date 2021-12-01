@@ -1,11 +1,13 @@
 {
   "name": "boilerplate-react-ts",
+  "sideEffects": false,
   "author": {
     "name": "Haslo"
   },
   "version": "1.0.0",
   "private": false,
   "scripts": {
+    "stats": "node_modules/.bin/webpack-bundle-analyzer stats.json",
     "start": "node_modules/.bin/webpack serve --config webpack.dev.ts",
     "build": "node_modules/.bin/webpack --config webpack.prod.ts",
     "deploy": "node_modules/.bin/serve -s ./dist -p 6688",
@@ -45,6 +47,7 @@
     "@storybook/addon-knobs": "^6.1.21",
     "@storybook/preset-typescript": "^3.0.0",
     "@storybook/react": "^6.1.21",
+    "@types/circular-dependency-plugin": "5.0.5",
     "@types/jest": "^26.0.21",
     "@types/node": "^12.0.0",
     "@types/react": "^16.9.53",
@@ -54,11 +57,13 @@
     "@types/react-router-dom": "^5.1.7",
     "@types/styled-components": "5.1.15",
     "@types/webpack": "5.28.0",
+    "@types/webpack-bundle-analyzer": "4.4.1",
     "@types/webpack-dev-server": "4.5.0",
     "@types/webpack-env": "1.16.3",
     "@typescript-eslint/eslint-plugin": "^5.5.0",
     "@typescript-eslint/parser": "^5.5.0",
     "@webpack-cli/serve": "1.6.0",
+    "circular-dependency-plugin": "5.2.2",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "8.3.0",
     "eslint-config-standard": "^16.0.3",
@@ -81,6 +86,7 @@
     "ts-loader": "^8.0.17",
     "ts-node": "10.4.0",
     "webpack": "5.63.0",
+    "webpack-bundle-analyzer": "4.5.0",
     "webpack-cli": "4.9.1",
     "webpack-dev-server": "4.4.0",
     "webpack-merge": "5.8.0"
