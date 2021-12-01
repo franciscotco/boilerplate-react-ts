@@ -1,38 +1,18 @@
-// Vendors
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
-import { BrowserRouter, Route } from 'react-router-dom';
+import React, { ReactElement } from "react";
 
-// Store
-import store from 'store';
+import LocaleProvider from "./locales";
+import ReduxProvider from "./redux";
+import Router from "./routes";
+import StyleProvider from "./styles";
 
-// Routes
-import Root from 'routes';
-
-
-ReactDOM.render(
-	<Provider store={store}>
-		<BrowserRouter>
-			<Route component={Root} />
-		</BrowserRouter>
-	</Provider>,
-	document.getElementById('app')
+const App = (): ReactElement => (
+  <ReduxProvider>
+    <StyleProvider>
+      <LocaleProvider>
+        <Router />
+      </LocaleProvider>
+    </StyleProvider>
+  </ReduxProvider>
 );
 
-
-/*
- * Accept hot reloads in dev mode
- */
-if (module.hot) {
-	module.hot.accept(['./routes/index.tsx'], () => {
-		ReactDOM.render(
-			<Provider store={store} key={Math.random()}>
-				<BrowserRouter>
-					{require('./routes/index.tsx').router}
-				</BrowserRouter>
-			</Provider>,
-			document.getElementById('app')
-		);
-	});
-}
+export default App;

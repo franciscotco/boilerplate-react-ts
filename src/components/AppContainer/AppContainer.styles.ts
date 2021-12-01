@@ -12,7 +12,7 @@ export const Body = styled.div`
   flex: 1;
 
   margin: 1rem;
-  @media (${({ theme }): string => theme.media.tablet_large}) {
+  @media (${({ theme }): string => theme.media.tabletLarge}) {
     margin: 3rem;
   }
 `;
