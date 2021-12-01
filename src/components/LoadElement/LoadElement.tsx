@@ -1,7 +1,7 @@
 import React, { Suspense } from "react";
 import type { PropsWithChildren, ReactElement, SuspenseProps } from "react";
 
-import Spinner from "@src/components/Spinner";
+import Spinner from "@src/components/spinner";
 
 export interface LoadElementProps {
   fallback?: SuspenseProps["fallback"];

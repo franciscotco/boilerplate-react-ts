@@ -4,7 +4,7 @@ import { FormattedMessage } from "react-intl";
 import { NavLink } from "react-router-dom";
 
 import { LangCode, supportedLanguages } from "@src/locales";
-import { routes } from "@src/routes";
+import { Page } from "@src/routes";
 
 import {
   Root,
@@ -22,9 +22,10 @@ import {
 export interface NavBarProps {
   langCode: LangCode;
   switchLang: (langCode: LangCode) => unknown;
+  routes: Page[];
 }
 
-const NavBar = ({ langCode, switchLang }: NavBarProps): ReactElement => {
+const NavBar = ({ langCode, routes, switchLang }: NavBarProps): ReactElement => {
   const onClick = useCallback((lang: LangCode) => (): unknown => switchLang(lang), [switchLang]);
 
   return (

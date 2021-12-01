@@ -8,7 +8,7 @@ import { routes } from "./pages";
 
 const Router = (): ReactElement => (
   <BrowserRouter>
-    <AppContainer>
+    <AppContainer routes={routes}>
       <Routes>
         {routes.map(({ component: Component, path, id }) => (
           <Route key={id} path={path} element={<Component />} />

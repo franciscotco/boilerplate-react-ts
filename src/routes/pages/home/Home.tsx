@@ -2,7 +2,7 @@ import React, { ReactElement } from "react";
 
 import { FormattedMessage, useIntl } from "react-intl";
 
-import Section from "@src/components/Section";
+import Section from "@src/components/section";
 
 const Home = (): ReactElement => {
   const intl = useIntl();
