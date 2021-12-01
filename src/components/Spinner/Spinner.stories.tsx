@@ -9,10 +9,8 @@ import Spinner from "./Spinner";
 
 storiesOf("Components/Spinner", module)
   .addDecorator(withKnobs)
-  .add("Demo", () => {
-    return (
-      <StyleProvider>
-        <Spinner />
-      </StyleProvider>
-    );
-  });
+  .add("Demo", () => (
+    <StyleProvider>
+      <Spinner />
+    </StyleProvider>
+  ));

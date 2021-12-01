@@ -44,7 +44,7 @@ export const Segment = styled.div`
 
   opacity: 1;
 
-  background: ${({ theme }): string => theme.color.gray_dark};
+  background: ${({ theme }): string => theme.color.grayDark};
   border-radius: 50px;
   box-shadow: 0 0 2px rgba(255, 255, 255, 0.3);
 
