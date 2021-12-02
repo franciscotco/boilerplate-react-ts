@@ -3,5 +3,6 @@
   "name": "Boilerplate react ts",
   "display": "standalone",
   "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "background_color": "#ffffff",
+  "default_locale": "en"
 }

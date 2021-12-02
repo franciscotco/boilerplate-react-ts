@@ -1,8 +1,9 @@
 import React, { ReactElement } from "react";
 
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import AppContainer from "@src/pages/AppContainer";
+import Error404 from "@src/pages/Error404";
 
 import { ROUTES } from "./routes";
 
@@ -11,10 +12,7 @@ const Router = (): ReactElement => (
     <Routes>
       <Route path="/" element={<AppContainer />}>
         <Route path={ROUTES.home.path} element={<ROUTES.home.component />} />
-        {/* {routes.map(({ component: Component, path, id }) => (
-          <Route key={id} path={path} element={<Component />} />
-        ))} */}
-        <Route element={<Navigate to="/home" />} />
+        <Route path="*" element={<Error404 />} />
       </Route>
     </Routes>
   </BrowserRouter>
