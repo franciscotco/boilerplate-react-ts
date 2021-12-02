@@ -1,6 +1,6 @@
 import React, { ReactElement } from "react";
 
-import LocaleProvider from "./locales";
+import LocalesProvider from "./locales";
 import ReduxProvider from "./redux";
 import Router from "./router";
 import StyleProvider from "./styles";
@@ -8,9 +8,9 @@ import StyleProvider from "./styles";
 const App = (): ReactElement => (
   <ReduxProvider>
     <StyleProvider>
-      <LocaleProvider>
+      <LocalesProvider>
         <Router />
-      </LocaleProvider>
+      </LocalesProvider>
     </StyleProvider>
   </ReduxProvider>
 );
