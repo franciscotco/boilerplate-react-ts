@@ -3,7 +3,7 @@ import React, { ReactElement, useCallback } from "react";
 import { FormattedMessage } from "react-intl";
 import { NavLink } from "react-router-dom";
 
-import { LangCode, supportedLanguages } from "@src/locales";
+import { LangCode, supportedLanguages } from "@src/locales/messages";
 import { routes } from "@src/router/routes";
 
 import {

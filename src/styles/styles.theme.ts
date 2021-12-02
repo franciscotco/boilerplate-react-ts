@@ -26,8 +26,10 @@ export interface Theme {
     grayMediumLight: string;
     grayMedium: string;
     grayDark: string;
+    blue: string;
     blueBackground: string;
     blueDark: string;
+    black: string;
   };
 }
 
@@ -51,6 +53,8 @@ export const THEME: Theme = {
     grayMedium: "#eaeaea",
     grayDark: "#555555",
     blueBackground: "#f9f9f9",
-    blueDark: "#194553"
+    blue: "#0000ff",
+    blueDark: "#194553",
+    black: "#000000"
   }
 };

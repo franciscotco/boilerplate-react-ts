@@ -47,11 +47,10 @@ export const RouteItem = styled.li`
 `;
 
 export const RouteLink = styled.a`
+  color: ${({ theme }): string => theme.color.black};
   &[aria-current] {
-    text-decoration: underline;
+    color: ${({ theme }): string => theme.color.blue};
   }
-
-  color: ${({ theme }): string => theme.color.blueDark};
 `;
 
 export const Heading3 = styled.h3`
