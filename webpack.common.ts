@@ -2,7 +2,7 @@ import { resolve } from "path";
 
 import CircularDependencyPlugin from "circular-dependency-plugin";
 import HtmlWebpackPlugin from "html-webpack-plugin";
-import { Configuration } from "webpack";
+import { Configuration, WebpackPluginInstance } from "webpack";
 
 // const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
 
@@ -35,7 +35,7 @@ const config: Configuration = {
       failOnError: true,
       allowAsyncCycles: false,
       cwd: process.cwd()
-    }),
+    }) as unknown as WebpackPluginInstance,
     new HtmlWebpackPlugin({
       template: "./public/index.html",
       chunks: ["app"]
