@@ -2,9 +2,7 @@ import { resolve } from "path";
 
 import CircularDependencyPlugin from "circular-dependency-plugin";
 import HtmlWebpackPlugin from "html-webpack-plugin";
-import { Configuration, WebpackPluginInstance } from "webpack";
-
-// const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
+import { type Configuration, type WebpackPluginInstance } from "webpack";
 
 const config: Configuration = {
   entry: {
