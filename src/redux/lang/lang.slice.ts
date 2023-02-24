@@ -1,8 +1,6 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, type PayloadAction } from "@reduxjs/toolkit";
 
 import type { LangCode } from "@src/locales";
-
-import type { PayloadAction } from "@reduxjs/toolkit";
 
 export interface LangState {
   code: LangCode;

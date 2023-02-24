@@ -12,7 +12,7 @@
     "build": "webpack --config webpack.prod.ts",
     "deploy": "serve -s ./dist -p 6688",
     "storybook": "start-storybook -p 6006",
-    "lint:fix": "eslint --config .eslintrc.json --quiet '{src}/**/*.{ts,tsx}' --fix",
+    "lint:fix": "eslint --config .eslintrc.json --quiet 'src/**/*.{ts,tsx}' --fix",
     "test": "jest"
   },
   "dependencies": {

@@ -1,5 +1,4 @@
-import React, { Suspense } from "react";
-import type { PropsWithChildren, ReactElement, SuspenseProps } from "react";
+import React, { Suspense, type PropsWithChildren, type ReactElement, type SuspenseProps } from "react";
 
 import Spinner from "@src/components/spinner";
 
