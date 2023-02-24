@@ -1,15 +1,17 @@
 import React from "react";
 
-import { render } from "react-dom";
+import { createRoot } from "react-dom/client";
 
 import App from "./App";
 
-const container = document.getElementById("app");
+const createDomNode = (): HTMLElement => {
+  const domNode = document.createElement("div");
 
-render(<App />, container);
+  domNode.setAttribute("id", "root");
+  document.body.appendChild(domNode);
+  return domNode;
+};
 
-if (module.hot) {
-  module.hot.accept(["./App.tsx"], (): void => {
-    render(require("./App.tsx").router, container);
-  });
-}
+const root = createRoot(document.getElementById("root") ?? createDomNode());
+
+root.render(<App />);
