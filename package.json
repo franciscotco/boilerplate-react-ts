@@ -7,13 +7,13 @@
   "version": "1.0.0",
   "private": false,
   "scripts": {
-    "stats": "node_modules/.bin/webpack-bundle-analyzer stats.json",
-    "start": "node_modules/.bin/webpack serve --config webpack.dev.ts",
-    "build": "node_modules/.bin/webpack --config webpack.prod.ts",
-    "deploy": "node_modules/.bin/serve -s ./dist -p 6688",
-    "storybook": "node_modules/.bin/start-storybook -p 6006",
-    "lint": "node_modules/.bin/eslint --config .eslintrc.json --quiet '{src,declarations}/**/*.{js,jsx,ts,tsx}' --fix",
-    "test": "node_modules/.bin/jest"
+    "stats": "webpack-bundle-analyzer stats.json",
+    "start": "webpack-dev-server --config webpack.dev.ts",
+    "build": "webpack --config webpack.prod.ts",
+    "deploy": "serve -s ./dist -p 6688",
+    "storybook": "start-storybook -p 6006",
+    "lint:fix": "eslint --config .eslintrc.json --quiet '{src}/**/*.{ts,tsx}' --fix",
+    "test": "jest"
   },
   "dependencies": {
     "@reduxjs/toolkit": "1.9.3",
