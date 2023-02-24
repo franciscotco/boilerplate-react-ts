@@ -1,5 +1,4 @@
-import React from "react";
-import type { ReactElement } from "react";
+import React, { type ReactElement } from "react";
 
 import LoadElement from "@src/components/LoadElement";
 

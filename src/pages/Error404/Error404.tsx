@@ -1,5 +1,4 @@
-import React from "react";
-import type { ReactElement } from "react";
+import React, { type ReactElement } from "react";
 
 import { Error404 as Root, Content } from "./Error404.styles";
 
