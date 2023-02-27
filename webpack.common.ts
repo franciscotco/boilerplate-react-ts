@@ -2,13 +2,18 @@ import { resolve } from "path";
 
 import CircularDependencyPlugin from "circular-dependency-plugin";
 import HtmlWebpackPlugin from "html-webpack-plugin";
-import { type Configuration, type WebpackPluginInstance } from "webpack";
+import { type Configuration } from "webpack";
 
 const config: Configuration = {
   entry: {
     app: ["./src/index.tsx"]
   },
   optimization: {
+    moduleIds: "named",
+    splitChunks: {
+      chunks: "all",
+      name: false
+    },
     usedExports: true
   },
   resolve: {
@@ -33,12 +38,11 @@ const config: Configuration = {
       failOnError: true,
       allowAsyncCycles: false,
       cwd: process.cwd()
-    }) as unknown as WebpackPluginInstance,
+    }),
     new HtmlWebpackPlugin({
       template: "./public/index.html",
       chunks: ["app"]
     })
-    // new BundleAnalyzerPlugin()
   ]
 };
 
