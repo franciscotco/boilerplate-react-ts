@@ -1,7 +1,6 @@
-import { resolve } from "path";
-
 import CircularDependencyPlugin from "circular-dependency-plugin";
 import HtmlWebpackPlugin from "html-webpack-plugin";
+import { resolve } from "path";
 import { type Configuration } from "webpack";
 
 const config: Configuration = {
