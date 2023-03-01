@@ -5,9 +5,6 @@ const fade = keyframes`
 	to   { opacity: 0.25; }
 `;
 
-/*
- *
- */
 export const Spinner = styled.div`
   position: relative;
   margin: 0 auto;
@@ -31,9 +28,6 @@ export const Spinner = styled.div`
   }
 `;
 
-/*
- *
- */
 export const Segment = styled.div`
   position: absolute;
   left: 46%;

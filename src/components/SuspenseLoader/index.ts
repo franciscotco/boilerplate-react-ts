@@ -1,1 +1,1 @@
-export { default } from "./SuspenseLoader";
+export { default, type SuspenseLoaderProps } from "./SuspenseLoader";
