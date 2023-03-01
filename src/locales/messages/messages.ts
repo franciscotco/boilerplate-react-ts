@@ -8,7 +8,7 @@ export type English = Record<EnglishKeys, string>;
 export type FrenchKeys = keyof typeof fr;
 export type French = Record<FrenchKeys, string>;
 
-export const supportedLanguages: LangCode[] = ["en", "fr"];
+export const SUPPORTED_LANGUAGES: LangCode[] = ["en", "fr"];
 
 const MESSAGES: Record<LangCode, English | French> = {
   en,

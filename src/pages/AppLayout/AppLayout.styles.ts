@@ -1,4 +1,3 @@
-// Vendors
 import styled from "styled-components";
 
 export const App = styled.div`
@@ -11,8 +10,5 @@ export const App = styled.div`
 export const Body = styled.div`
   flex: 1;
 
-  margin: 1rem;
-  @media (${({ theme }): string => theme.media.tabletLarge}) {
-    margin: 3rem;
-  }
+  padding: ${({ theme }): string => theme.spacing.xl};
 `;
