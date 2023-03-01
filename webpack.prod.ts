@@ -1,5 +1,6 @@
 import { resolve } from "path";
 import TerserPlugin from "terser-webpack-plugin";
+import { DefinePlugin } from "webpack";
 import { merge } from "webpack-merge";
 
 import common from "./webpack.common";
@@ -22,7 +23,12 @@ const config = merge(common, {
     buildDependencies: {
       config: [__filename]
     }
-  }
+  },
+  plugins: [
+    new DefinePlugin({
+      webpackDevServer: false
+    }),
+  ]
 });
 
 export default config;

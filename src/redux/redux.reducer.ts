@@ -2,8 +2,8 @@ import { combineReducers } from "redux";
 
 import lang from "./lang";
 
-const reducers = combineReducers({
+const reducer = combineReducers({
   lang
 });
 
-export default reducers;
+export default reducer;
