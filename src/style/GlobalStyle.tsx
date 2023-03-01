@@ -7,12 +7,12 @@ const GlobalStyle = createGlobalStyle`
   }
 
   html {
-    font-size: 12px / 1.4;
+    font-size: calc(12px / 1.4);
     @media (${({ theme }): string => theme.media.tabletLarge}) {
-      font-size: 14px / 1.4;
+      font-size: calc(14px / 1.4);
     }
     @media (${({ theme }): string => theme.media.desktopXXLarge}) {
-      font-size: 14px / 1.4;
+      font-size: calc(14px / 1.4);
     }
   }
 

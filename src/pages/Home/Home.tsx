@@ -1,8 +1,8 @@
-import React, { ReactElement } from "react";
+import React, { type ReactElement } from "react";
 
 import { FormattedMessage, useIntl } from "react-intl";
 
-import Section from "@src/components/section";
+import Section from "@src/components/Section";
 
 const Home = (): ReactElement => {
   const intl = useIntl();
