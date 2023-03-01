@@ -1,5 +1,5 @@
-import { LangCode } from "@src/locales";
-import { AppDispatch } from "@src/redux";
+import { type LangCode } from "@src/locales";
+import { type AppDispatch } from "@src/redux/redux.types";
 
 import { setLangCode } from "./lang.slice";
 

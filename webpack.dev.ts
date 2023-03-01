@@ -1,4 +1,5 @@
 import ESLintPlugin from "eslint-webpack-plugin";
+import { DefinePlugin } from "webpack";
 import "webpack-dev-server";
 import { merge } from "webpack-merge";
 
@@ -25,7 +26,10 @@ const config = merge(common, {
       fix: true,
       failOnError: false,
       emitWarning: true
-    })
+    }),
+    new DefinePlugin({
+      webpackDevServer: true
+    }),
   ]
 });
 

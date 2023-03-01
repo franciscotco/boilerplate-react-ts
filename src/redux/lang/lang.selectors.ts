@@ -1,16 +1,14 @@
 import { createSelector } from "@reduxjs/toolkit";
-import { Selector } from "react-redux";
 
-import { LangCode } from "@src/locales";
+import { type LangCode } from "@src/locales";
+import { type AppSelector } from "@src/redux/redux.types";
 
-import store from "../redux.store";
-
-import { LangState } from "./lang.slice";
+import { type LangState } from "./lang.slice";
 
 export interface LangSelectors {
-  selectCode: Selector<ReturnType<typeof store.getState>, LangCode>;
+  selectCode: AppSelector<LangCode>;
 }
 
-export const langSelectors = (slicer: Selector<ReturnType<typeof store.getState>, LangState>): LangSelectors => ({
-  selectCode: createSelector(slicer, (state) => state.code)
+export const langSelectors = (slicer: AppSelector<LangState>): LangSelectors => ({
+  selectCode: createSelector(slicer, ({ code }) => code)
 });
