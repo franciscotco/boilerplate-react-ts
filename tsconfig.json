@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "target": "es5",
+    "types": ["cypress"],
     "lib": [
       "dom",
       "dom.iterable",
@@ -35,7 +36,8 @@
     "src",
     ".storybook",
     "webpack.*",
-    "jest.config.ts"
+    "jest.config.ts",
+    "cypress"
   ],
   "exclude": [
     "node_modules",
