@@ -1,14 +1,22 @@
 import React, {
-  type DetailedHTMLProps,
+  ForwardedRef,
+  forwardRef,
+  type ComponentPropsWithRef,
   type PropsWithChildren,
-  type ReactElement,
-  type SelectHTMLAttributes
+  type ReactElement
 } from "react";
 
 import { List as Root } from "./List.styles";
 
-export type ListProps = DetailedHTMLProps<SelectHTMLAttributes<HTMLUListElement>, HTMLUListElement>;
+export type ListProps = ComponentPropsWithRef<typeof Root>;
 
-const List = ({ children }: PropsWithChildren<ListProps>): ReactElement => <Root>{children}</Root>;
+const List = (
+  { children, ...props }: PropsWithChildren<ListProps>,
+  ref: ForwardedRef<HTMLUListElement>
+): ReactElement => (
+  <Root {...props} ref={ref}>
+    {children}
+  </Root>
+);
 
-export default List;
+export default forwardRef(List);

@@ -1,14 +1,13 @@
 import React, { type ReactElement } from "react";
 
-import { FormattedMessage, useIntl } from "react-intl";
-
+import FormattedMessage, { useFormattedMessage } from "@src/components/FormattedMessage";
 import Section from "@src/components/Section";
 
 const Home = (): ReactElement => {
-  const intl = useIntl();
+  const formattedMessage = useFormattedMessage();
 
   return (
-    <Section title={intl.formatMessage({ id: "ROUTES.HOME.TITLE" })}>
+    <Section title={formattedMessage({ id: "ROUTES.HOME.TITLE" })}>
       <FormattedMessage id="ROUTES.HOME.DESC" />
     </Section>
   );

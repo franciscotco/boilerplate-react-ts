@@ -1,9 +1,9 @@
 import { combineReducers } from "redux";
 
-import lang from "./lang";
+import languages from "./languages";
 
 const reducer = combineReducers({
-  lang
+  languages
 });
 
 export default reducer;

@@ -1,13 +1,12 @@
 import React, { type ReactElement } from "react";
 
-import { FormattedMessage } from "react-intl";
 import { NavLink } from "react-router-dom";
 
+import FormattedMessage from "@src/components/FormattedMessage";
 import List from "@src/components/List";
-import { SUPPORTED_LANGUAGES } from "@src/locales/messages";
 
 import { Root, Header, RouteLink } from "./NavBar.styles";
-import SupportedLanguage from "./SupportedLanguage";
+import SelectLanguages from "./SelectLanguages";
 
 const NavBar = (): ReactElement => (
   <Root>
@@ -19,11 +18,7 @@ const NavBar = (): ReactElement => (
           </RouteLink>
         </li>
       </List>
-      <List>
-        {SUPPORTED_LANGUAGES.map((code) => (
-          <SupportedLanguage key={code} code={code} />
-        ))}
-      </List>
+      <SelectLanguages />
     </Header>
   </Root>
 );

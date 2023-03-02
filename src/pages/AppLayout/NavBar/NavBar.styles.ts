@@ -1,4 +1,4 @@
-import styled, { css, type FlattenSimpleInterpolation } from "styled-components";
+import styled from "styled-components";
 
 export const Root = styled.div`
   width: 100%;
@@ -28,17 +28,4 @@ export const RouteLink = styled.a`
   &[aria-current] {
     color: ${({ theme }): string => theme.color.blue};
   }
-`;
-
-export const SupportedLanguage = styled.li<{ isActive: boolean }>`
-  text-decoration: none;
-  text-transform: uppercase;
-
-  cursor: pointer;
-
-  ${({ isActive, theme }): FlattenSimpleInterpolation | false =>
-    isActive &&
-    css`
-      color: ${theme.color.blue};
-    `}
 `;

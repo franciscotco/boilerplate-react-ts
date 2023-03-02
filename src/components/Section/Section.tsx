@@ -1,9 +1,9 @@
-import React, { type ReactElement, type PropsWithChildren, type ReactNode } from "react";
+import React, { type ReactElement, type PropsWithChildren } from "react";
 
 import { Section as Root, Title, Content } from "./Section.styles";
 
 export interface SectionProps {
-  title: ReactNode;
+  title: string;
 }
 
 const Section = ({ children, title }: PropsWithChildren<SectionProps>): ReactElement => (
