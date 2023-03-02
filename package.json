@@ -16,7 +16,8 @@
     "test": "jest",
     "extract-compile:en": "formatjs extract 'src/**/*en.ts' --out-file temp.json --flatten --id-interpolation-pattern '[sha512:contenthash:base64:6]' && formatjs compile 'temp.json' --out-file src/locales/messages/en.json && rm temp.json",
     "extract-compile:fr": "formatjs extract 'src/**/*fr.ts' --out-file temp.json --flatten --id-interpolation-pattern '[sha512:contenthash:base64:6]' && formatjs compile 'temp.json' --out-file src/locales/messages/fr.json && rm temp.json",
-    "extract-compile:languages": "yarn run extract-compile:en && yarn run extract-compile:fr"
+    "extract-compile:languages": "yarn run extract-compile:en && yarn run extract-compile:fr",
+    "cypress:open": "cypress open"
   },
   "dependencies": {
     "@reduxjs/toolkit": "1.9.3",
@@ -56,9 +57,11 @@
     "@typescript-eslint/parser": "5.53.0",
     "@webpack-cli/serve": "2.0.1",
     "circular-dependency-plugin": "5.2.2",
+    "cypress": "12.7.0",
     "eslint": "8.34.0",
     "eslint-config-prettier": "8.6.0",
     "eslint-config-standard": "17.0.0",
+    "eslint-plugin-cypress": "2.12.1",
     "eslint-plugin-import": "2.27.5",
     "eslint-plugin-jsx-a11y": "6.7.1",
     "eslint-plugin-n": "15.6.1",
