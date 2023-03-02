@@ -13,7 +13,10 @@
     "deploy": "serve -s ./dist -p 6688",
     "storybook": "start-storybook -p 6006",
     "lint:fix": "eslint --config .eslintrc.json --quiet 'src/**/*.{ts,tsx}' --fix",
-    "test": "jest"
+    "test": "jest",
+    "extract-compile:en": "formatjs extract 'src/**/*en.ts' --out-file temp.json --flatten --id-interpolation-pattern '[sha512:contenthash:base64:6]' && formatjs compile 'temp.json' --out-file src/locales/messages/en.json && rm temp.json",
+    "extract-compile:fr": "formatjs extract 'src/**/*fr.ts' --out-file temp.json --flatten --id-interpolation-pattern '[sha512:contenthash:base64:6]' && formatjs compile 'temp.json' --out-file src/locales/messages/fr.json && rm temp.json",
+    "extract-compile:languages": "yarn run extract-compile:en && yarn run extract-compile:fr"
   },
   "dependencies": {
     "@reduxjs/toolkit": "1.9.3",
@@ -31,6 +34,7 @@
     "typescript": "4.9.5"
   },
   "devDependencies": {
+    "@formatjs/cli": "6.0.4",
     "@storybook/addon-knobs": "6.4.0",
     "@storybook/builder-webpack5": "6.5.16",
     "@storybook/manager-webpack5": "6.5.16",
