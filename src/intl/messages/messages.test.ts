@@ -1,11 +1,11 @@
-import MESSAGES, { FrenchKeys } from "./messages";
+import { MESSAGES } from "./messages";
 
 describe("Locales", () => {
   test("key matching fr & en", () => {
     const { fr, en } = MESSAGES;
 
     Object.keys(fr).forEach((frKey) => {
-      expect(!!en[frKey as FrenchKeys]).toBe(true);
+      expect(en[frKey]).toBe(true);
     });
   });
 });

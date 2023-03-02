@@ -1,5 +1,5 @@
-import { langSelectors } from "./lang";
+import { languagesSelectors } from "./languages";
 
 export const selectors = {
-  lang: langSelectors(({ lang }) => lang)
+  languages: languagesSelectors(({ languages }) => languages)
 };
