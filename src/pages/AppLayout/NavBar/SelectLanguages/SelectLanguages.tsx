@@ -26,7 +26,7 @@ const SelectLanguages = (): ReactElement => {
   );
 
   return (
-    <Select onChange={handleChange} defaultValue={languageCode}>
+    <Select onChange={handleChange} defaultValue={languageCode} id="cy-select-language">
       {SUPPORTED_LANGUAGES.map((code) => (
         <Option key={code} value={code}>
           <FormattedMessage id={`NAVBAR.SELECT.LANGUAGES.${code}`} />
