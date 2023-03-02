@@ -5,7 +5,7 @@ describe("Locales", () => {
     const { fr, en } = MESSAGES;
 
     Object.keys(fr).forEach((frKey) => {
-      expect(en[frKey]).toBe(true);
+      expect(en[frKey]).equal(true);
     });
   });
 });

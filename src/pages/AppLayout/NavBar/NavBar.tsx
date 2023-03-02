@@ -13,7 +13,7 @@ const NavBar = (): ReactElement => (
     <Header>
       <List>
         <li>
-          <RouteLink as={NavLink} to="/home">
+          <RouteLink as={NavLink} to="/home" id="cy-home-link">
             <FormattedMessage id="ROUTES.HOME.NAME" />
           </RouteLink>
         </li>
