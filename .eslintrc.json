@@ -30,10 +30,8 @@
     "cypress"
   ],
   "globals": {
-    "defaultDebounceTime": false,
     "webpackDevServer": false,
-    "baseURL": false,
-    "jest": false,
+    "jest": true,
     "afterEach": false,
     "beforeEach": false,
     "context": false,
